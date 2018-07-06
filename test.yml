@@ -1,6 +1,6 @@
 ---
 
-# This playbook will install the pre-requesits packages for setting up backup and alert management scripts.
+# This playbook will install the prerequisite packages for setting up backup and alert management scripts.
 # Amazon Time Sync Service : https://aws.amazon.com/blogs/aws/keeping-time-with-amazon-time-sync-service/
 # AWS SSM Client installation : https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-manual-agent-install.html
 # AWS CLI installation : https://docs.aws.amazon.com/cli/latest/userguide/installing.html

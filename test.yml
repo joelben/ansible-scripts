@@ -1,0 +1,26 @@
+---
+- name: test playbook
+  hosts: 127.0.0.1
+  become: yes
+  tasks:
+  - name: remove ntp clients
+    yum: name=ntp* state=absent
+   
+  - name: install chrony
+    yum: name=chrony state=present
+  
+  - name: start chrony service
+    service: name=chronyd state=started enabled=yes
+  
+  - name: install epel repository
+    yum: name=https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm state=present   
+ 
+  - name: install python
+    yum: name="{{item}}" state=latest
+    with_items:
+    - python
+    - python-pip
+  
+  - name: install aws cli
+    pip: name=awscli state=latest
+ 
